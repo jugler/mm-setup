@@ -1,0 +1,13 @@
+		{
+			module: 'MMM-forecast-io',
+			position: '$position',  // This can be any of the regions.
+			config: {
+			  // See 'Configuration options' for more information.
+			  apiKey: 'a89a155a3b70be18e9f62242206e1637', // Dark Sky API key.
+			  // Only required if geolocation doesn't work:
+			  latitude:   $latitude,
+			  longitude: $longitude,
+			  units: '$units',
+			  enablePrecipitationGraph: true
+			}
+		},

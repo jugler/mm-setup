@@ -1,0 +1,14 @@
+		{
+			module: "calendar",
+			header: "$header",
+			position: "$position",
+			config: {
+				maximumEntries: $max_entries,
+				calendars: [
+					{
+						symbol: "calendar-check-o ",
+						url: "$calendar_url"
+					}
+				]
+			}
+		},

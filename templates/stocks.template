@@ -1,0 +1,7 @@
+		{
+    		module: "MMM-Stock",
+    		position: "$position",
+    		config: {
+    			companies: [$stocks]
+    		}
+		},

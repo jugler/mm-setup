@@ -1,0 +1,7 @@
+		{
+			module: "clock",
+			position: "$position",
+			config: {
+				displaySeconds: $display_seconds
+			}
+		},
