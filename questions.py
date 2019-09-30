@@ -42,7 +42,14 @@ questions = [
             },
             {
                 'name': 'Stocks'
-            }#,
+            },
+            {
+                'name': "News Feed"
+            },
+            {
+                'name': "Random Compliment"
+            }
+            #,
             # {
             #     'name': 'Uber Wait Time'
             # },
@@ -160,6 +167,34 @@ lyft_questions = [
             {'name':'Lyft'},{'name':'Lyft Plus'},{'name':'Lyft Line'},{'name':'Premier'},{'name':'Lyft Lux'},{'name':'Lyft Lux SUV'}
         ]
     }
+]
+
+news_feed_questions = [
+    positions,
+    {
+        'type': 'checkbox',
+        'name': 'selected_feeds',
+        'message': 'Select the news feed you want to follow',
+        'choices': [
+            {'name':'New York Times'},{'name':'BBC'},{'name':'custom'}
+        ]
+    }
+]
+custom_feed_questions = [
+    {
+        'type':'input',
+        'name':'custom_feed',
+        'message': 'Title of the custom news feed'
+    },
+        {
+        'type':'input',
+        'name':'custom_feed_url',
+        'message': 'Full URL of the feed to track (e.g. http://www.nytimes.com/services/xml/rss/nyt/HomePage.xml)'
+    }
+]
+
+random_compliment_questions = [
+    positions   
 ]
 
 restart_question = [

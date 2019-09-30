@@ -10,6 +10,7 @@ wifi = "*"
 "cheetah3" = "*"
 
 [dev-packages]
+pylint = "*"
 
 [requires]
 python_version = "3.6"
