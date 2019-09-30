@@ -9,6 +9,8 @@ import questions, wifi_utils, raspberry_utils, config
 from modules import Clock, Calendar, USHolidays, Forecast, Stocks, NewsFeed, RandomCompliment
 import subprocess
 
+from shutil import copyfile
+
 
 
 
@@ -21,14 +23,19 @@ def main():
 
     print("Configuration saved!, a restart is needed to apply changes")
     print("Moving configuration to MagicMirror Directory")
-    subprocess.run("cp tmp/config.js /home/pi/MagicMirror/config/config.js")
+    copyfile("tmp/config.js", "/home/pi/MagicMirror/config/config.js")
+    
+    # activate pm2 activate mm if it isnt
+    # restart whole pi to apply changes (screen, wifi, magic mirror config)
+    subprocess.call(['pm2','start','/home/pi/mm.sh'])
+    subprocess.call(['pm2','save'])
     print("Restarting MagicMirror")
-    subprocess.run("pm2 restart mm")
-    # restart_input = prompt(questions.restart_question)
+    #subprocess.call(['/usr/bin/pm2','restart','mm'])
+    restart_input = prompt(questions.restart_question)
 
 
-    # if restart_input.get("restart"):
-    #     raspberry_utils.restart_raspberry()
+    if restart_input.get("restart"):
+         raspberry_utils.restart_raspberry()
 
     exit
 

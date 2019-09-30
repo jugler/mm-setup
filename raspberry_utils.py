@@ -16,4 +16,4 @@ def rotate_screen(screen_rotation: str):
 
 def restart_raspberry():
     print("Restarting raspberry pi!")
-    subprocess.run("reboot")
+    subprocess.call(["sudo","reboot"])

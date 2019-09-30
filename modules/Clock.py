@@ -5,7 +5,7 @@ import file_utils
 
 class Clock:
     def __init__(self, config):
-        if config.get('display_seconds') == 'y':
+        if config.get('display_seconds'):
             self.display_seconds  = "true" 
         else:
             self.display_seconds  = "false"

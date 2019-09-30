@@ -2,9 +2,8 @@
     		module: "newsfeed",
     		position: "$position",
     		config: {
-    			feeds: [
-                    $feeds
-                ],
+    			feeds: $feeds
+                ,
                 showSourceTitle: true,
 				showPublishDate: true
     		}
